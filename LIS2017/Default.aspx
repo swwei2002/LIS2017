@@ -22,7 +22,7 @@
 	
 	<block name="head">
 	<!-- Page Head -->
-    <h2>Welcome</h2>
+    <h2>Welcome11</h2>
     <p id="page-intro">What would you like to do?</p>
     <ul class="shortcut-buttons-set">
       <li><a class="shortcut-button" href="#"><span> <img src="/Resources/images/icons/pencil_48.png" alt="icon" /><br />
