@@ -10,7 +10,7 @@ using System.Configuration;
 using System.Data.Common;
 
 
-namespace LIS2017
+namespace LIS2017.App_Code
 {
     /// <summary>
     /// 数据访问抽象基础类

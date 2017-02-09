@@ -9,13 +9,13 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data.Common;
 
-namespace LIS2017
+namespace LIS2017.App_Code
 {
     public class Common
     {
         public static DataSet UserLogin(string username, string password)
         {
-            return DbHelperSQL.Query("select * from oa_user where disable = 0 and user_name = '" + username + "' and user_password = '" + password + "'");
+            return DbHelperSQL.Query("select * from lis_user where disable = 0 and user_name = '" + username + "' and user_password = '" + password + "'");
         }
 
         public static void AddLog(string username, string pagetype, int pageid, string operation)
