@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
+
 namespace LIS2017
 {
     public partial class Login : System.Web.UI.Page
@@ -19,17 +20,17 @@ namespace LIS2017
         {
             if (txtUserName.Text == null || txtUserName.Text == "")
             {
-                LTP.Common.MessageBox.Show(this.Page, "用户名不可为空");
+                //LTP.Common.MessageBox.Show(this.Page, "用户名不可为空");
                 return;
             }
             if (txtPassword.Text == null || txtPassword.Text == "")
             {
-                LTP.Common.MessageBox.Show(this.Page, "密码不可为空");
+                //LTP.Common.MessageBox.Show(this.Page, "密码不可为空");
                 return;
             }
 
             DataSet ds = new DataSet();
-            ds = LIS2017.App_Code.Common.UserLogin(txtUserName.Text, txtPassword.Text);
+            ds =LIS2017.App_Code.Common.UserLogin(txtUserName.Text, txtPassword.Text);
 
             if (ds.Tables[0].Rows.Count == 1)
             {
@@ -52,7 +53,7 @@ namespace LIS2017
                 //    LIS2017.App_Code.Common.AddLog(txtUserName.Text, "Login.aspx", 0, "LoginSuccess");
                 //}
 
-                LTP.Common.MessageBox.Show(this.Page, "登录成功");
+                //LTP.Common.MessageBox.Show(this.Page, "登录成功");
                 return;
 
 
@@ -60,7 +61,7 @@ namespace LIS2017
             else
             {
                 //LIS2017.App_Code.Common.AddLog(txtUserName.Text, "Login.aspx", 0, "LoginFailed");
-                LTP.Common.MessageBox.Show(this.Page, "登录失败，请核对帐号密码是否正确，或联系管理员");
+                //LTP.Common.MessageBox.Show(this.Page, "登录失败，请核对帐号密码是否正确，或联系管理员");
                 return;
             }
 
