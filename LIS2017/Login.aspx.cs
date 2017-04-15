@@ -20,17 +20,27 @@ namespace LIS2017
         {
             if (txtUserName.Text == null || txtUserName.Text == "")
             {
-                //LTP.Common.MessageBox.Show(this.Page, "用户名不可为空");
+                LTP.Common.MessageBox.Show(this.Page, "用户名不可为空");
                 return;
             }
             if (txtPassword.Text == null || txtPassword.Text == "")
             {
-                //LTP.Common.MessageBox.Show(this.Page, "密码不可为空");
+                LTP.Common.MessageBox.Show(this.Page, "密码不可为空");
                 return;
             }
 
             DataSet ds = new DataSet();
             ds =LIS2017.App_Code.Common.UserLogin(txtUserName.Text, txtPassword.Text);
+
+
+            if (Request.QueryString["link_from"] == null)
+            {
+                Response.Redirect("MainFrame/Default.aspx");
+            }
+            else
+            {
+                Response.Redirect(Request.QueryString["link_from"]);
+            }
 
             if (ds.Tables[0].Rows.Count == 1)
             {
@@ -53,7 +63,7 @@ namespace LIS2017
                 //    LIS2017.App_Code.Common.AddLog(txtUserName.Text, "Login.aspx", 0, "LoginSuccess");
                 //}
 
-                //LTP.Common.MessageBox.Show(this.Page, "登录成功");
+                LTP.Common.MessageBox.Show(this.Page, "登录成功");
                 return;
 
 
@@ -65,16 +75,6 @@ namespace LIS2017
                 return;
             }
 
-
-
-            if (Request.QueryString["link_from"] == null)
-            {
-                Response.Redirect("MainFrame/Default.aspx");
-            }
-            else
-            {
-                Response.Redirect(Request.QueryString["link_from"]);
-            }
         }
 
     }

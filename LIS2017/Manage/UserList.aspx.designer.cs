@@ -7,9 +7,9 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace LIS2017 {
+namespace LIS2017.Manage {
     
     
-    public partial class _Default {
+    public partial class UserList {
     }
 }

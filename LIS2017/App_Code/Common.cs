@@ -20,8 +20,9 @@ namespace LIS2017.App_Code
 
         public static void AddLog(string username, string pagetype, int pageid, string operation)
         {
-            DbHelperSQL.ExecuteSql("insert into oa_log (log_username,log_pagetype,log_pageid,log_operation) values ('" + username + "','" + pagetype + "'," + pageid + ",'" + operation + "')");
-
+            DbHelperSQL.ExecuteSql("insert into lis_log (log_username,log_pagetype,log_pageid,log_operation) values ('" + username + "','" + pagetype + "'," + pageid + ",'" + operation + "')");
         }
+
+
     }
 }

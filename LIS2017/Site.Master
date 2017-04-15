@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>OA系统-SCCL</title>
+<title>LIS系统-SCCL</title>
 <!--                       CSS                       -->
 <!-- Reset Stylesheet -->
 <link rel="stylesheet" href="/Resources/css/reset.css" type="text/css" media="screen" />
@@ -37,6 +37,7 @@
 
 </head>
 <body>
+
     <form runat="server">
 
 <div id="body-wrapper">
@@ -51,64 +52,62 @@
       <!-- Sidebar Profile links -->
 	  
     <div id="profile-links"> Hello, <a href="#" title="Edit your profile">Tester</a>, <a href="{:U('/'.MODULE_NAME.'/Index/logout')}" title="Sign Out">登出</a> 
-	, you have <a href="#messages" rel="modal" title="3 Messages">3 Messages</a><br />	
+	<!--, you have <a href="#messages" rel="modal" title="3 Messages">3 Messages</a><br />	-->
 	</div>
       <ul id="main-nav">
         <!-- Accordion Menu -->
 		
 		<!-- 首页 -->
-        <li><a href="/Main.aspx" class="nav-top-item no-submenu" id="home">首页</a></li>
+        <li><a href="Main.aspx" class="nav-top-item no-submenu" id="home">首页</a></li>
 		
-		
-		<!-- 问卷管理 -->
-
-		<li><a href="#" class="nav-top-item" id="survey">问卷管理</a>
+		<li><a href="#" class="nav-top-item" id="order">工作令管理</a>
             <ul>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="survey-pcr">新技术评估</a></li>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="survey-sync">同步数据</a></li>
-			    <li><a href="{:U('/'.MODULE_NAME.'/Survey/contact')}" id="survey-contact">飞信登记</a></li>
-		    </ul></li>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="order-create">工作令生成</a></li>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="order-receive">工作令接收</a></li>
+		    </ul>
+		</li>
+
+        <li><a href="#" class="nav-top-item" id="clinical">检验管理</a>
+            <ul>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="clinical-input">数据录入</a></li>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="clinical-review">数据审核</a></li>
+		    </ul>
+		</li>
+
+        <li><a href="#" class="nav-top-item" id="report">报告管理</a>
+            <ul>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="report-input">报告审核</a></li>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="report-print">报告打印</a></li>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="report-totalprint">汇总打印</a></li>
+		    </ul>
+		</li>
+
+        <li><a href="#" class="nav-top-item" id="system">系统管理</a>
+            <ul>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="system-maintenance">套餐维护</a></li>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="system-user">修改个人信息</a></li>
+                <li><a href="/Manage/UserList.aspx" id="system-totaluser">用户管理</a></li>
+		    </ul>
+		</li>
 		  
       </ul>
-      <!-- End #main-nav -->
-	  <!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
-
-	  <div id="messages" style="display: none">
-        
-        <h3>3 Messages</h3>
-        <p> <strong>17th May 2009</strong> by Admin<br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
-        <p> <strong>2nd May 2009</strong> by Jane Doe<br />
-          Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
-        <p> <strong>25th April 2009</strong> by Admin<br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
-        <form action="#" method="post">
-          <h4>New Message</h4>
-          <fieldset>
-          <textarea class="textarea" name="textfield" cols="79" rows="5"></textarea>
-          </fieldset>
-          <fieldset>
-          <select name="dropdown" class="small-input">
-            <option value="option1">Send to...</option>
-            <option value="option2">Everyone</option>
-            <option value="option3">Admin</option>
-            <option value="option4">Jane Doe</option>
-          </select>
-          <input class="button" type="submit" value="Send" />
-          </fieldset>
-        </form>
-      </div>
-
       <!-- End #messages -->
     </div>
   </div>
   <!-- End #sidebar -->
 
   <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+
  
-</div>
 
-
+    <div id="main-content">
+    <div id="footer"> 
+    <small>
+      <!-- Remove this notice or replace it with whatever you want -->
+      &#169; Copyright 2017 上海市临床检验中心 | <a href="#">Top</a> 
+    </small> 
+    </div>
+        </div>
         
     </form>
 </body>
