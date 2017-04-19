@@ -84,9 +84,14 @@
 
         <li><a href="#" class="nav-top-item" id="system">系统管理</a>
             <ul>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="system-maintenance">套餐维护</a></li>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="system-user">修改个人信息</a></li>
-                <li><a href="/Manage/UserList.aspx" id="system-totaluser">用户管理</a></li>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="system-user">修改密码</a></li>
+		    </ul>
+		</li>
+
+        <li><a href="#" class="nav-top-item" id="admin">管理员专用</a>
+            <ul>
+                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="admin-maintenance">套餐维护</a></li>
+                <li><a href="/Manage/UserList.aspx" id="admin-user">用户管理</a></li>
 		    </ul>
 		</li>
 		  

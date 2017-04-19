@@ -18,10 +18,11 @@ namespace LIS2017.App_Code
             return DbHelperSQL.Query("select * from lis_user where disable = 0 and user_name = '" + username + "' and user_password = '" + password + "'");
         }
 
-        public static void AddLog(string username, string pagetype, int pageid, string operation)
+        public static void AddLog(int user_id, string page_name, int page_id, string operation)
         {
-            DbHelperSQL.ExecuteSql("insert into lis_log (log_username,log_pagetype,log_pageid,log_operation) values ('" + username + "','" + pagetype + "'," + pageid + ",'" + operation + "')");
+            DbHelperSQL.ExecuteSql("insert into lis_log (user_id,page_name,page_id,log_operation) values ('" + user_id + "','" + page_name + "'," + page_id + ",'" + operation + "')");
         }
+
 
 
     }
