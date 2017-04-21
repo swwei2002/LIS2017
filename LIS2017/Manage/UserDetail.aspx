@@ -1,15 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserAdd.aspx.cs" Inherits="LIS2017.Manage.UserAdd" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserDetail.aspx.cs" Inherits="LIS2017.Manage.UserDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-
-    <script type="text/javascript">
+        <script type="text/javascript">
 		window.onload=function(){
 		    changeSideBar("system", "system-totaluser");
 		}		
     </script>
-
 </asp:Content>
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <div id="main-content">
@@ -27,6 +23,13 @@
 
             <fieldset>
             <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+            <p>
+              <label>用户ID</label>
+              <asp:TextBox ID="txtUserId" runat="server" class="text-input small-input" ReadOnly="true"></asp:TextBox>
+                <br />
+              <small>用户ID无法修改</small>
+            </p>
+
             <p>
               <label>用户名</label>
               <asp:TextBox ID="txtUserName" runat="server" class="text-input small-input"></asp:TextBox>
@@ -75,4 +78,5 @@
     </div>
 
 </div>
+
 </asp:Content>

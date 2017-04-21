@@ -28,42 +28,50 @@
             <thead>
               <tr>
                 <th>用户名</th>
+                <th>密码</th>
                 <th>真名</th>
                 <th>科室</th>
-				<th>开启状态</th>
+                <th>权限</th>
+				<th>状态</th>
                 <th>操作</th>
               </tr>
             </thead>
-            <tfoot>
+
+            <tbody>
+
+        <asp:Repeater ID="rptData" runat="server">
+        <ItemTemplate>
+
               <tr>
-                <td colspan="5">
+                <td><%# Eval("user_name")%></td>
+                <td><%# Eval("user_password")%></td>
+                <td><%# Eval("real_name")%></td>
+                <td><%# Eval("department_name")%></td>
+                <td><%# Eval("user_access").ToString() == "1" ? "普通用户" : Eval("user_access").ToString() == "2" ? "管理员" : "超级管理员"%></td>
+				<td><%# Eval("disable").ToString() == "0" ? "启用" : "禁用"%></td>
+                <td>
+                  <a href="UserDetail.aspx?user_id=<%# Eval("user_id")%>" title="编辑"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>
+				  <a href="UserDisable.aspx?user_id=<%# Eval("user_id")%>&disable=<%# Eval("disable")%>" title="禁用"><img src="/Resources/images/icons/cross.png" alt="禁用" /></a>	 
+			    </td>
+              </tr> 
+                
+               </ItemTemplate>
+        </asp:Repeater>       
+
+            </tbody>
+
+            <tfoot>
+
+              <tr>
+                <td colspan="7">
                   <div class="bulk-actions align-left">
-                    <a class="button" href="#">新增用户</a> </div>
-                  <div class="pagination"> <a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a> </div>
+                    <a class="button" href="UserAdd.aspx">新增用户</a> </div>
+                  <div class="pagination"> <a href="#" title="第一页">&laquo; 第一页</a><a href="#" title="前一页">&laquo; 前一页</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="后一页">后一页 &raquo;</a><a href="#" title="最末页">最末页 &raquo;</a> </div>
                   <!-- End .pagination -->
                   <div class="clear"></div>
                 </td>
               </tr>
             </tfoot>
-            <tbody>
-			
-
-              <tr>
-                <td>user_name</td>
-                <td>real_name</td>
-                <td>mobile</td>
-				<td>开启or关闭</td>
-                <td>
-                  <a href="#" title="编辑"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>
-				  <a href="#" title="禁用"><img src="/Resources/images/icons/cross.png" alt="禁用" /></a>
-				  <a href="#" title="配置权限"><img src="/Resources/images/icons/hammer_screwdriver.png" alt="配置权限" /></a>
-			    </td>
-              </tr>  
-			  
-
-
- 
-            </tbody>
           </table>
         </div>
 

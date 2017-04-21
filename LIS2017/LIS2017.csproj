@@ -257,6 +257,8 @@
     <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Manage\UserAdd.aspx" />
+    <Content Include="Manage\UserDetail.aspx" />
+    <Content Include="Manage\UserDisable.aspx" />
     <Content Include="Manage\UserList.aspx" />
     <Content Include="Manage\UserPassword.aspx" />
     <Content Include="packages.config" />
@@ -434,6 +436,20 @@
     </Compile>
     <Compile Include="Manage\UserAdd.aspx.designer.cs">
       <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\UserDetail.aspx.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\UserDetail.aspx.designer.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\UserDisable.aspx.cs">
+      <DependentUpon>UserDisable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\UserDisable.aspx.designer.cs">
+      <DependentUpon>UserDisable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>

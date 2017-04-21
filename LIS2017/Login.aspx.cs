@@ -44,7 +44,7 @@ namespace LIS2017
             }
             else
             {
-                LIS2017.App_Code.Common.AddLog(int.Parse(Session["user_id"].ToString()), "Login.aspx", 0, "Failed");
+                LIS2017.App_Code.Common.AddLog(0, "Login.aspx?user_name="+txtUserName.Text, 0, "Failed");
                 LTP.Common.MessageBox.Show(this.Page, "登录失败，请核对帐号密码是否正确，或联系管理员");
                 return;
             }

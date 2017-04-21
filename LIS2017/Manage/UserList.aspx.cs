@@ -10,12 +10,11 @@ namespace LIS2017.Manage
 {
     public partial class UserList : System.Web.UI.Page
     {
-        DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserId"] == null)
+            if (Session["user_id"] == null)
             {
-                //Response.Redirect("/Login.aspx");
+                Response.Redirect("../Login.aspx?link_from=Manage/UserList.aspx");
             }
 
             if (!IsPostBack)
@@ -26,10 +25,13 @@ namespace LIS2017.Manage
 
         public void BindData()
         {
-            //ds = OA.App_Code.Manage.GetUserList();
-            //gvLists.DataSource = ds;
-            //gvLists.DataKeyNames = new string[] { "user_id" };
-            //gvLists.DataBind();
+            DataSet ds = new DataSet();
+            ds = LIS2017.App_Code.Manage.UserList();
+            rptData.DataSource = ds;
+            rptData.DataBind();
+
+            //翻页稍后做
+
         }
 
 

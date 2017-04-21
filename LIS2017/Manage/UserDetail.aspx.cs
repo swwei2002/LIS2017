@@ -8,13 +8,13 @@ using System.Data;
 
 namespace LIS2017.Manage
 {
-    public partial class UserAdd : System.Web.UI.Page
+    public partial class UserDetail : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user_id"] == null)
             {
-                Response.Redirect("../Login.aspx?link_from=Manage/UserAdd.aspx");
+                Response.Redirect("../Login.aspx?link_from=Manage/UserList.aspx");
             }
             if (!IsPostBack)
             {
@@ -24,12 +24,25 @@ namespace LIS2017.Manage
 
         public void BindData()
         {
+            //初始化科室
             DataSet ds = new DataSet();
             ds = LIS2017.App_Code.Common.TypeInfoByPreId(1);
             ddlDepartment.DataSource = ds.Tables[0].DefaultView;
             ddlDepartment.DataTextField = "type_name";
             ddlDepartment.DataValueField = "type_id";
             ddlDepartment.DataBind();
+
+
+            //初始化信息
+            DataSet ds2 = new DataSet();
+            ds2 = LIS2017.App_Code.Manage.UserDetail(int.Parse(Request.QueryString["user_id"]));
+            txtUserId.Text = ds2.Tables[0].Rows[0]["user_id"].ToString();
+            txtUserName.Text = ds2.Tables[0].Rows[0]["user_name"].ToString();
+            txtPassword.Text = ds2.Tables[0].Rows[0]["user_password"].ToString();
+            txtRealName.Text = ds2.Tables[0].Rows[0]["real_name"].ToString();
+            ddlDepartment.SelectedValue = ds2.Tables[0].Rows[0]["department_id"].ToString();
+            rblAccess.SelectedValue = ds2.Tables[0].Rows[0]["user_access"].ToString();
+
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -46,10 +59,10 @@ namespace LIS2017.Manage
                 return;
             }
 
-            int new_id = LIS2017.App_Code.Manage.UserAdd(txtUserName.Text, txtPassword.Text, txtRealName.Text, int.Parse(ddlDepartment.SelectedValue.ToString()), int.Parse(rblAccess.SelectedValue.ToString()));
-            LIS2017.App_Code.Common.AddLog(int.Parse(Session["user_id"].ToString()), "Manage/UserAdd.aspx", new_id, "AddUserSuccess");
-            Response.Redirect("UserList.aspx");
+            LIS2017.App_Code.Manage.UserModify(int.Parse(txtUserId.Text),txtUserName.Text,txtPassword.Text,txtRealName.Text,int.Parse(ddlDepartment.SelectedValue.ToString()),int.Parse(rblAccess.SelectedValue.ToString()));
+            LIS2017.App_Code.Common.AddLog(int.Parse(Session["user_id"].ToString()), "Manage/UserDetail.aspx", int.Parse(txtUserId.Text), "ModifyUserSuccess");
 
+            Response.Redirect("UserList.aspx");
 
         }
     }

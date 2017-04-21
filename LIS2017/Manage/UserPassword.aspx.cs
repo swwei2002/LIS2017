@@ -25,7 +25,7 @@ namespace LIS2017.Manage
         public void BindData()
         {
             DataSet ds = new DataSet();
-            ds = LIS2017.App_Code.Manage.UserInfo(int.Parse(Session["user_id"].ToString()));
+            ds = LIS2017.App_Code.Manage.UserDetail(int.Parse(Session["user_id"].ToString()));
             txtUserName.Text = ds.Tables[0].Rows[0]["user_name"].ToString();
 
         }
