@@ -256,6 +256,8 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
+    <Content Include="Manage\GeneralItemDetail.aspx" />
+    <Content Include="Manage\GeneralItemList.aspx" />
     <Content Include="Manage\UserAdd.aspx" />
     <Content Include="Manage\UserDetail.aspx" />
     <Content Include="Manage\UserDisable.aspx" />
@@ -351,8 +353,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\CodeInfoManage.cs" />
     <Compile Include="App_Code\Common.cs" />
     <Compile Include="App_Code\DbHelperSQL.cs" />
+    <Compile Include="App_Code\GeneralItemManage.cs" />
     <Compile Include="App_Code\Manage.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -429,6 +433,20 @@
     </Compile>
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\GeneralItemDetail.aspx.cs">
+      <DependentUpon>GeneralItemDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\GeneralItemDetail.aspx.designer.cs">
+      <DependentUpon>GeneralItemDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\GeneralItemList.aspx.cs">
+      <DependentUpon>GeneralItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\GeneralItemList.aspx.designer.cs">
+      <DependentUpon>GeneralItemList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\UserAdd.aspx.cs">
       <DependentUpon>UserAdd.aspx</DependentUpon>
