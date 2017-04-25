@@ -3,8 +3,14 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+        <script type="text/javascript">
+		    window.onload=function(){
+		        changeSideBar("admin", "admin-gitemlist");
+		    }		
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
     <div id="main-content">
         <div class="content-box">
             <div class="content-box-header">
@@ -12,11 +18,14 @@
                 <div class="clear"></div>
             </div>
             <div class="content-box-content">
+
+                <div> 
                 <p>
                     <label style="display: inline">检验类型</label>
                     <asp:DropDownList ID="DropDownListType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownListType_SelectedIndexChanged"></asp:DropDownList>
                     <a href="GeneralItemDetail.aspx?op=add" title="编辑" class="button">新增项目</a>
                 </p>
+                 </div>
                 <div>
                     <table>
                         <thead>
@@ -35,18 +44,30 @@
                                 <td><%# Eval("NAME")%></td>
                                 <td><%# Eval("SHORTNAME")%></td>
                                 <td>
-                                    <a href="GeneralItemDetail.aspx?item_code=<%# Eval("ITEM_CODE")%>" title="编辑"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>
-				                    <asp:ImageButton ID="ImageButtonDelete" runat="server" CommandArgument='<%# Eval("ITEM_CODE")%>' ImageUrl="/Resources/images/icons/cross.png" OnClick="ImageButtonDelete_Click"  OnClientClick="return confirm('确定删除？')" ToolTip="删除"/>
+                                <a href="GeneralItemDetail.aspx?item_code=<%# Eval("ITEM_CODE")%>" title="编辑"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>
+				                <asp:ImageButton ID="ImageButtonDelete" runat="server" CommandArgument='<%# Eval("ITEM_CODE")%>' ImageUrl="/Resources/images/icons/cross.png" OnClick="ImageButtonDelete_Click"  OnClientClick="return confirm('确定删除？')" ToolTip="删除"/>
 			                    </td>
                             </tr>
                             </ItemTemplate>
                         </asp:Repeater>
                         </tbody>
 
-                    </table>
+                <tfoot>
+              <tr>
+                <td colspan="4">
+                    <div class="bulk-actions align-left">
+
+                        </div>
                         <div class="pagination">
                             <webdiyer:aspnetpager ID="AspNetPager1" runat="server" AlwaysShow="True" OnPageChanged="AspNetPager1_PageChanged" ShowCustomInfoSection="Left"></webdiyer:aspnetpager>
                         </div>
+                  <div class="clear"></div>
+                </td>
+              </tr>
+            </tfoot>
+
+                    </table>
+
                 </div>
             </div>
         </div>

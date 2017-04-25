@@ -58,7 +58,7 @@
                 
               <label>权限</label>
 
-            <asp:RadioButtonList ID="rblAccess" runat="server" RepeatDirection="Horizontal" class="medium-input">
+            <asp:RadioButtonList ID="rblAccess" runat="server" RepeatDirection="Horizontal" class="medium-input" >
                 <asp:ListItem Text="普通用户" Value="1"  Selected="True"></asp:ListItem>
                 <asp:ListItem Text="管理员" Value="2"></asp:ListItem>
                 <asp:ListItem Text="超级管理员" Value="0"></asp:ListItem>
