@@ -7,27 +7,36 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace LIS2017 {
+namespace LIS2017.Manage {
     
     
-    public partial class SiteMaster {
+    public partial class GeneralItemList {
         
         /// <summary>
-        /// HeadContent 控件。
+        /// DropDownListType 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListType;
         
         /// <summary>
-        /// MainContent 控件。
+        /// RepeaterItem 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterItem;
+        
+        /// <summary>
+        /// AspNetPager1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager1;
     }
 }
