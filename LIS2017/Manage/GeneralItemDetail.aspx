@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GeneralItemDetail.aspx.cs" Inherits="LIS2017.Manage.GeneralItemDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-        <script type="text/javascript">
+    <script type="text/javascript">
 		    window.onload=function(){
 		        changeSideBar("admin", "admin-gitemlist");
 		    }		

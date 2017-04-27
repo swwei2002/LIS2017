@@ -1,13 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="LIS2017.Manage.UserList" %>
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-
     <script type="text/javascript">
 		    window.onload=function(){
 		        changeSideBar("system", "system-totaluser");
 		    }		
     </script>
-
 </asp:Content>
 
 
@@ -66,7 +65,9 @@
                 <td colspan="7">
                   <div class="bulk-actions align-left">
                     <a class="button" href="UserAdd.aspx">新增用户</a> </div>
-                  <div class="pagination"> <a href="#" title="第一页">&laquo; 第一页</a><a href="#" title="前一页">&laquo; 前一页</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="后一页">后一页 &raquo;</a><a href="#" title="最末页">最末页 &raquo;</a> </div>
+                        <div class="pagination">
+                            <webdiyer:aspnetpager ID="AspNetPager1" runat="server" AlwaysShow="True" OnPageChanged="AspNetPager1_PageChanged" ShowCustomInfoSection="Left"></webdiyer:aspnetpager>
+                        </div>
                   <!-- End .pagination -->
                   <div class="clear"></div>
                 </td>

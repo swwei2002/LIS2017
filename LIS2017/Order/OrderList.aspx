@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OrderList.aspx.cs" Inherits="LIS2017.Order.OrderList" %>
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
             <script type="text/javascript">
 		window.onload=function(){
@@ -8,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div id="main-content">
-<block name="main">	
+
     <div class="content-box">
       <!-- Start Content Box -->
       <div class="content-box-header">
@@ -54,10 +56,8 @@
             <tfoot>
               <tr>
                 <td colspan="3">
-                  <div class="pagination">
-                      
-                       <a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a> 
-
+                  <div class="pagination">       
+                       <webdiyer:aspnetpager ID="AspNetPager1" runat="server" AlwaysShow="True" OnPageChanged="AspNetPager1_PageChanged" ShowCustomInfoSection="Left"></webdiyer:aspnetpager>
                   </div>
                   <!-- End .pagination -->
                   <div class="clear"></div>
@@ -72,7 +72,7 @@
 
         <div class="tab-content" id="tab2">
 
- <table>
+        <table>
             <thead>
               <tr>
                 <th>标本号</th>
@@ -99,11 +99,9 @@
             <tfoot>
               <tr>
                 <td colspan="3">
-                  <div class="pagination">
-                      
-                       <a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a> 
-
-                  </div>
+                        <div class="pagination">
+                            <webdiyer:aspnetpager ID="AspNetPager2" runat="server" AlwaysShow="True" OnPageChanged="AspNetPager2_PageChanged" ShowCustomInfoSection="Left"></webdiyer:aspnetpager>
+                        </div>
                   <!-- End .pagination -->
                   <div class="clear"></div>
                 </td>
@@ -118,7 +116,7 @@
       <!-- End .content-box-content -->
     </div>
     <!-- End .content-box -->	
-	</block>
+
 
     </div>
 </asp:Content>
