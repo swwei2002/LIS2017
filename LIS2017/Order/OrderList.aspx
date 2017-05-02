@@ -46,7 +46,7 @@
                 <td><%# Eval("company_name")%></td>
                 <td>
                   <!-- Icons -->
-                  <a href="#" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a> <a href="#" title="Delete"><img src="/Resources/images/icons/cross.png" alt="Delete" /></a> </td>
+                  <a href="OrderDetail.aspx?info_id=<%# Eval("info_id")%>" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>  </td>
               </tr>  
 		  <!-- loop list end -->
         </ItemTemplate>
@@ -99,7 +99,7 @@
                 <td><%# Eval("age")%></td>
                 <td>
                   <!-- Icons -->
-                  <a href="#" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a> <a href="#" title="Delete"><img src="/Resources/images/icons/cross.png" alt="Delete" /></a> </td>
+                  <a href="OrderDetail.aspx?info_id=<%# Eval("info_id")%>" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>  </td>
               </tr>  
 		  <!-- loop list end -->
             		  <!-- loop list end -->

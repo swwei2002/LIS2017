@@ -264,6 +264,7 @@
     <Content Include="Manage\UserList.aspx" />
     <Content Include="Manage\UserPassword.aspx" />
     <Content Include="Order\OrderAdd.aspx" />
+    <Content Include="Order\OrderDetail.aspx" />
     <Content Include="Order\OrderList.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
@@ -492,6 +493,13 @@
     </Compile>
     <Compile Include="Order\OrderAdd.aspx.designer.cs">
       <DependentUpon>OrderAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Order\OrderList.aspx.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>

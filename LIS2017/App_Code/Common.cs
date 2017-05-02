@@ -67,6 +67,16 @@ namespace LIS2017.App_Code
             return DbHelperSQL.Query(sb.ToString());
         }
 
+        public static DataSet CodeInfo(string class_id)
+        {
+            return DbHelperSQL.Query("select * from LIS_CODE_INFO where class_id = '"+class_id+"'");
+        }
+
+        public static DataSet DISEASEInfo()
+        {
+            return DbHelperSQL.Query("select * from LIS_DISEASE");
+        }
+
 
     }
 }

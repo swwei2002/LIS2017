@@ -11,7 +11,7 @@ namespace LIS2017.App_Code
     {
         public static DataSet OrderDetail(int info_id)
         {
-            return DbHelperSQL.Query("select * from LIS_TEST_INFO where LIS_TEST_INFO =" + info_id);
+            return DbHelperSQL.Query("select * from LIS_TEST_INFO where info_id =" + info_id);
         }
 
         //公司id，公司名，生成数量
@@ -48,9 +48,9 @@ namespace LIS2017.App_Code
             return gen_num;
         }
 
-        public static int OrderModify(int user_id, string user_name, string user_password, string real_name, int department_id, int user_access)
+        public static int OrderModify(int info_id,string company_id,string company_name,string sample_type,string dis_code,string disease,string name,string gender,string age,string card_id,string info_status)
         {
-            return DbHelperSQL.ExecuteSql("update LIS_TEST_INFO set user_name = '" + user_name + "',user_password = '" + user_password + "',real_name = N'" + real_name + "',department_id = '" + department_id + "',user_access = '" + user_access + "' where user_id = " + user_id);
+            return DbHelperSQL.ExecuteSql("update LIS_TEST_INFO set company_id = '" + company_id + "',company_name = '" + company_name + "',sample_type = '" + sample_type + "',dis_code = '" + dis_code + "',disease = '" + disease + "',name = '" + name + "',gender = '" + gender + "',age = '" + age + "',card_id = '" + card_id + "',info_status = '" + info_status + "' where info_id = " + info_id);
         }
 
         public static DataSet OrderList(string info_status,int start,int end)
