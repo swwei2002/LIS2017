@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="LIS2017.Manage.UserList" %>
-<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <script type="text/javascript">
@@ -45,7 +45,7 @@
                 <td><%# Eval("user_name")%></td>
                 <td><%# Eval("user_password")%></td>
                 <td><%# Eval("real_name")%></td>
-                <td><%# Eval("department_name")%></td>
+                <td><%# Eval("name")%></td>
                 <td><%# Eval("user_access").ToString() == "1" ? "普通用户" : Eval("user_access").ToString() == "2" ? "管理员" : "超级管理员"%></td>
 				<td><%# Eval("disable").ToString() == "0" ? "启用" : "禁用"%></td>
                 <td>
@@ -66,8 +66,7 @@
                   <div class="bulk-actions align-left">
                     <a class="button" href="UserAdd.aspx">新增用户</a> </div>
                         <div class="pagination">
-                            <webdiyer:aspnetpager ID="AspNetPager1" runat="server" AlwaysShow="True" OnPageChanged="AspNetPager1_PageChanged" ShowCustomInfoSection="Left"></webdiyer:aspnetpager>
-                        </div>
+ </div>
                   <!-- End .pagination -->
                   <div class="clear"></div>
                 </td>

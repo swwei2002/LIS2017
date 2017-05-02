@@ -60,11 +60,11 @@
 		<!-- 首页 -->
         <li><a href="/Main.aspx" class="nav-top-item no-submenu" id="home">首页</a></li>
 		
-		<li><a href="#" class="nav-top-item" id="order">工作令管理</a>
+		<li><a href="#" class="nav-top-item" id="order">标本管理</a>
             <ul>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="order-create">生成标本号</a></li>
+                <li><a href="/Order/OrderAdd.aspx" id="order-add">生成标本</a></li>
                 <li><a href="/Order/OrderList.aspx" id="order-info">标本信息</a></li>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="order-receive">标本项目</a></li>
+                <li><a href="#" id="order-receive">项目绑定</a></li>
 		    </ul>
 		</li>
 

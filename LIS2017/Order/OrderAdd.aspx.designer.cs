@@ -10,42 +10,33 @@
 namespace LIS2017.Order {
     
     
-    public partial class OrderList {
+    public partial class OrderAdd {
         
         /// <summary>
-        /// rptNoInfo 控件。
+        /// ddlOrderFrom 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNoInfo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlOrderFrom;
         
         /// <summary>
-        /// AspNetPager1 控件。
+        /// txtNumber 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager1;
+        protected global::System.Web.UI.WebControls.TextBox txtNumber;
         
         /// <summary>
-        /// rptData 控件。
+        /// btnSubmit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptData;
-        
-        /// <summary>
-        /// AspNetPager2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager2;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

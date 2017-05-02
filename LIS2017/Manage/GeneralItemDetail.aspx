@@ -26,7 +26,7 @@
                   <asp:DropDownList ID="DropDownListItemType" runat="server" class="small-input"></asp:DropDownList>
 
               </p>
-                              <p>
+            <p>
                   <label>检验类型</label>
                   <asp:DropDownList ID="DropDownListTestType" runat="server" class="small-input"></asp:DropDownList>
 

@@ -25,10 +25,11 @@ namespace LIS2017.Manage
         public void BindData()
         {
             DataSet ds = new DataSet();
-            ds = LIS2017.App_Code.Common.TypeInfoByPreId(1);
+            //ds = LIS2017.App_Code.Common.TypeInfoByPreId(1);
+            ds = LIS2017.App_Code.Common.GroupInfo("1","0");
             ddlDepartment.DataSource = ds.Tables[0].DefaultView;
-            ddlDepartment.DataTextField = "type_name";
-            ddlDepartment.DataValueField = "type_id";
+            ddlDepartment.DataTextField = "NAME";
+            ddlDepartment.DataValueField = "GROUP_ID";
             ddlDepartment.DataBind();
         }
 
