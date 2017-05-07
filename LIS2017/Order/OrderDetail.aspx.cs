@@ -50,7 +50,6 @@ namespace LIS2017.Order
             ddlGender.DataValueField = "NAME";
             ddlGender.DataBind();
 
-
             //标本信息
             ds = LIS2017.App_Code.Order.OrderDetail(int.Parse(Request.QueryString["info_id"]));
             txtCode.Text = ds.Tables[0].Rows[0]["CODE"].ToString();
@@ -67,6 +66,14 @@ namespace LIS2017.Order
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             LIS2017.App_Code.Order.OrderModify(int.Parse(Request.QueryString["info_id"]), ddlOrderFrom.SelectedValue.ToString(), ddlOrderFrom.SelectedItem.Text, ddlSampleType.SelectedItem.Text, ddlDisease.SelectedValue.ToString(), ddlDisease.SelectedItem.Text, txtName.Text, ddlGender.SelectedItem.Text, txtAge.Text, txtCardId.Text, "已完善");
+
+            //将选择过的推到最前
+            LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_COMPANY", "CODE", ddlOrderFrom.SelectedValue.ToString());
+            LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_CODE_INFO","NAME",ddlSampleType.SelectedValue.ToString());
+            LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_DISEASE","DIS_ID",ddlDisease.SelectedValue.ToString());
+            LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_CODE_INFO", "NAME", ddlGender.SelectedValue.ToString());
+
+            //暂时不记录日志，缺少session会报错
             //LIS2017.App_Code.Common.AddLog(int.Parse(Session["user_id"].ToString()), "Manage/UserDetail.aspx", int.Parse(txtUserId.Text), "ModifyUserSuccess");
 
             Response.Redirect("OrderList.aspx");

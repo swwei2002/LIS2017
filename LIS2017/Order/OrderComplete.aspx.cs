@@ -8,15 +8,10 @@ using System.Data;
 
 namespace LIS2017.Order
 {
-    public partial class OrderList : System.Web.UI.Page
+    public partial class OrderComplete : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user_id"] == null)
-            {
-                //Response.Redirect("../Login.aspx?link_from=Order/OrderList.aspx");
-            }
-
             if (!IsPostBack)
             {
                 BindData();
@@ -27,22 +22,19 @@ namespace LIS2017.Order
         {
 
             //所有记录
-            //int pageSize2 = AspNetPager2.PageSize;
             AspNetPager2.PageSize = 100;
-            int pageSize = AspNetPager2.PageSize;
-            int pageNo = AspNetPager2.CurrentPageIndex - 1;
-            int start = pageNo * pageSize + 1;
-            int end = (pageNo + 1) * pageSize;
+            int pageSize2 = AspNetPager2.PageSize;
+            int pageNo2 = AspNetPager2.CurrentPageIndex - 1;
+            int start2 = pageNo2 * pageSize2 + 1;
+            int end2 = (pageNo2 + 1) * pageSize2;
 
-            DataSet ds2 = LIS2017.App_Code.Order.OrderList("", start, end);
-            AspNetPager2.RecordCount = LIS2017.App_Code.Order.OrderCountByStatus("");
+            DataSet ds2 = LIS2017.App_Code.Order.OrderList("未完善", start2, end2);
+            AspNetPager2.RecordCount = LIS2017.App_Code.Order.OrderCountByStatus("未完善");
             AspNetPager2.CustomInfoHTML = "记录总数：<b>" + AspNetPager2.RecordCount.ToString() + "</b>";
             rptData.DataSource = ds2;
             rptData.DataBind();
 
         }
-
-
         protected void AspNetPager2_PageChanged(object sender, EventArgs e)
         {
             BindData();
@@ -74,5 +66,7 @@ namespace LIS2017.Order
             LTP.Common.MessageBox.Show(this.Page, "成功将" + num + "条标本号放入待打印列表，请操作打印机打印");
             return;
         }
+
+
     }
 }

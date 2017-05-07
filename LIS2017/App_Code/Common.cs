@@ -25,15 +25,15 @@ namespace LIS2017.App_Code
         }
 
         //根据一个pre_id查询此id下的子id
-        public static DataSet TypeInfoByPreId(int pre_type_id)
-        {
-            return DbHelperSQL.Query("select * from lis_typelist where disable = 0 and pre_type_id = " + pre_type_id + " order by order_num");
-        }
+        //public static DataSet TypeInfoByPreId(int pre_type_id)
+        //{
+        //    return DbHelperSQL.Query("select * from lis_typelist where disable = 0 and pre_type_id = " + pre_type_id + " order by order_num");
+        //}
 
-        public static DataSet TypeInfoById(int type_id)
-        {
-            return DbHelperSQL.Query("select * from lis_typelist where disable = 0 and type_id = " + type_id + " order by order_num");
-        }
+        //public static DataSet TypeInfoById(int type_id)
+        //{
+        //    return DbHelperSQL.Query("select * from lis_typelist where disable = 0 and type_id = " + type_id + " order by order_num");
+        //}
 
         public static DataSet GroupInfo(string group_type,string group_id)
         {
@@ -50,8 +50,9 @@ namespace LIS2017.App_Code
                 sb.Append(" and group_id = '"+group_id+"'");
             }
 
-            return DbHelperSQL.Query(sb.ToString());
+            sb.Append(" order by revise_time desc");
 
+            return DbHelperSQL.Query(sb.ToString());
         }
 
         public static DataSet CompanyInfo(string code)
@@ -64,17 +65,24 @@ namespace LIS2017.App_Code
                 sb.Append(" and code = '"+code+"'");
             }
 
+            sb.Append(" order by revise_time desc");
+
             return DbHelperSQL.Query(sb.ToString());
         }
 
         public static DataSet CodeInfo(string class_id)
         {
-            return DbHelperSQL.Query("select * from LIS_CODE_INFO where class_id = '"+class_id+"'");
+            return DbHelperSQL.Query("select * from LIS_CODE_INFO where class_id = '"+class_id+ "' order by revise_time desc");
         }
 
         public static DataSet DISEASEInfo()
         {
-            return DbHelperSQL.Query("select * from LIS_DISEASE");
+            return DbHelperSQL.Query("select * from LIS_DISEASE order by revise_time desc");
+        }
+
+        public static int ReviseTimeUpdate(string table_name, string column_name, string column_id)
+        {
+            return DbHelperSQL.ExecuteSql("update "+table_name+" set revise_time = getdate() where "+column_name+" = '"+column_id+"'");
         }
 
 

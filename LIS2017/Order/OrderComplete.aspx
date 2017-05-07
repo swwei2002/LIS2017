@@ -1,26 +1,28 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OrderList.aspx.cs" Inherits="LIS2017.Order.OrderList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OrderComplete.aspx.cs" Inherits="LIS2017.Order.OrderComplete" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-            <script type="text/javascript">
+                <script type="text/javascript">
 		window.onload=function(){
-		    changeSideBar("order", "order-info");
+		    changeSideBar("order", "order-complete");
 		}		
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="main-content">
+
+     <div id="main-content">
 
     <div class="content-box">
       <!-- Start Content Box -->
       <div class="content-box-header">
-        <h3>标本信息</h3>
+        <h3>标本补录</h3>
 
         <div class="clear"></div>
       </div>
       <!-- End .content-box-header -->
-      <div class="content-box-content">
 
+      <div class="content-box-content">
+ 
 
 
         <div class="tab-content default-tab" id="tab2">

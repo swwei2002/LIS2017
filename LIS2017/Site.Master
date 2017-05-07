@@ -63,7 +63,9 @@
 		<li><a href="#" class="nav-top-item" id="order">标本管理</a>
             <ul>
                 <li><a href="/Order/OrderAdd.aspx" id="order-add">生成标本</a></li>
-                <li><a href="/Order/OrderList.aspx" id="order-info">标本信息</a></li>
+                <li><a href="/Order/OrderComplete.aspx" id="order-complete">信息补录</a></li>
+                <li><a href="/Order/OrderList.aspx" id="order-info">标本汇总</a></li>
+                <li><a href="/Order/OrderSearch.aspx" id="order-search">标本搜索</a></li>
                 <li><a href="#" id="order-receive">项目绑定</a></li>
 		    </ul>
 		</li>

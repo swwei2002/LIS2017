@@ -10,7 +10,7 @@
 namespace LIS2017.Order {
     
     
-    public partial class OrderList {
+    public partial class OrderComplete {
         
         /// <summary>
         /// btnPrint 控件。
