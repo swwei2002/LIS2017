@@ -12,10 +12,6 @@ namespace LIS2017.Manage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user_id"] == null)
-            {
-                Response.Redirect("../Login.aspx?link_from=Manage/UserList.aspx");
-            }
             if (!IsPostBack)
             {
                 BindData();
@@ -26,10 +22,10 @@ namespace LIS2017.Manage
         {
             //初始化科室
             DataSet ds = new DataSet();
-            ds = LIS2017.App_Code.Common.TypeInfoByPreId(1);
+            ds = LIS2017.App_Code.Common.GroupInfo("1", "0");
             ddlDepartment.DataSource = ds.Tables[0].DefaultView;
-            ddlDepartment.DataTextField = "type_name";
-            ddlDepartment.DataValueField = "type_id";
+            ddlDepartment.DataTextField = "NAME";
+            ddlDepartment.DataValueField = "GROUP_ID";
             ddlDepartment.DataBind();
 
 
@@ -60,7 +56,7 @@ namespace LIS2017.Manage
             }
 
             LIS2017.App_Code.Manage.UserModify(int.Parse(txtUserId.Text),txtUserName.Text,txtPassword.Text,txtRealName.Text,int.Parse(ddlDepartment.SelectedValue.ToString()),int.Parse(rblAccess.SelectedValue.ToString()));
-            LIS2017.App_Code.Common.AddLog(int.Parse(Session["user_id"].ToString()), "Manage/UserDetail.aspx", int.Parse(txtUserId.Text), "ModifyUserSuccess");
+            //LIS2017.App_Code.Common.AddLog(int.Parse(Session["user_id"].ToString()), "Manage/UserDetail.aspx", int.Parse(txtUserId.Text), "ModifyUserSuccess");
 
             Response.Redirect("UserList.aspx");
 

@@ -20,7 +20,7 @@ namespace LIS2017.App_Code
 
         public static int UserAdd(string user_name, string user_password, string real_name, int department_id, int user_access)
         {
-            return DbHelperSQL.ExecuteSql("insert into lis_user (user_name,user_password,real_name,department_id,user_accese) values ('" + user_name + "','" + user_password + "',N'" + real_name + "','" + department_id + "','" + user_access + "')");
+            return DbHelperSQL.ExecuteSql("insert into lis_user (user_name,user_password,real_name,department_id,user_access) values ('" + user_name + "','" + user_password + "',N'" + real_name + "','" + department_id + "','" + user_access + "')");
         }
 
         public static DataSet UserList()
@@ -39,6 +39,8 @@ namespace LIS2017.App_Code
         {
             return DbHelperSQL.ExecuteSql("update lis_user set user_name = '" + user_name+ "',user_password = '" + user_password + "',real_name = N'" + real_name + "',department_id = '" + department_id + "',user_access = '" + user_access + "' where user_id = "+ user_id);
         }
+
+        //
 
 
     }

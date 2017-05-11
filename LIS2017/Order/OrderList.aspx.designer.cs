@@ -7,36 +7,36 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace LIS2017.Manage {
+namespace LIS2017.Order {
     
     
-    public partial class GeneralItemList {
+    public partial class OrderList {
         
         /// <summary>
-        /// DropDownListType 控件。
+        /// btnPrint 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListType;
+        protected global::System.Web.UI.WebControls.Button btnPrint;
         
         /// <summary>
-        /// RepeaterItem 控件。
+        /// rptData 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterItem;
+        protected global::System.Web.UI.WebControls.Repeater rptData;
         
         /// <summary>
-        /// AspNetPager1 控件。
+        /// AspNetPager2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager1;
+        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager2;
     }
 }

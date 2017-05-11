@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GeneralItemDetail.aspx.cs" Inherits="LIS2017.Manage.GeneralItemDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <script type="text/javascript">
+		    window.onload=function(){
+		        changeSideBar("admin", "admin-gitemlist");
+		    }		
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div id="main-content">
@@ -21,7 +26,7 @@
                   <asp:DropDownList ID="DropDownListItemType" runat="server" class="small-input"></asp:DropDownList>
 
               </p>
-                              <p>
+            <p>
                   <label>检验类型</label>
                   <asp:DropDownList ID="DropDownListTestType" runat="server" class="small-input"></asp:DropDownList>
 

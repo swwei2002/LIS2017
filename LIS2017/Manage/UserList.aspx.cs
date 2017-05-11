@@ -34,6 +34,21 @@ namespace LIS2017.Manage
 
         }
 
+        private void InitGeneralItem()
+        {
+            //int pageSize = AspNetPager1.PageSize;
+            //int pageNo = AspNetPager1.CurrentPageIndex - 1;
+            //int start = pageNo * pageSize + 1;
+            //int end = (pageNo + 1) * pageSize;
+            //string code = DropDownListType.SelectedValue;
+
+            //DataSet ds = GeneralItemManage.GetItemListByTestType(code, start, end);
+            //AspNetPager1.RecordCount = GeneralItemManage.GetItemListCountByTestType(code);
+            //AspNetPager1.CustomInfoHTML = "记录总数：<b>" + AspNetPager1.RecordCount.ToString() + "</b>";
+            //RepeaterItem.DataSource = ds;
+            //RepeaterItem.DataBind();
+        }
+
 
     }
 }

@@ -58,12 +58,15 @@
         <!-- Accordion Menu -->
 		
 		<!-- 首页 -->
-        <li><a href="Main.aspx" class="nav-top-item no-submenu" id="home">首页</a></li>
+        <li><a href="/Main.aspx" class="nav-top-item no-submenu" id="home">首页</a></li>
 		
-		<li><a href="#" class="nav-top-item" id="order">工作令管理</a>
+		<li><a href="#" class="nav-top-item" id="order">标本管理</a>
             <ul>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="order-create">工作令生成</a></li>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="order-receive">工作令接收</a></li>
+                <li><a href="/Order/OrderAdd.aspx" id="order-add">生成标本</a></li>
+                <li><a href="/Order/OrderComplete.aspx" id="order-complete">信息补录</a></li>
+                <li><a href="/Order/OrderList.aspx" id="order-info">标本汇总</a></li>
+                <li><a href="/Order/OrderSearch.aspx" id="order-search">标本搜索</a></li>
+                <li><a href="#" id="order-receive">项目绑定</a></li>
 		    </ul>
 		</li>
 
@@ -90,7 +93,7 @@
 
         <li><a href="#" class="nav-top-item" id="admin">管理员专用</a>
             <ul>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="admin-maintenance">套餐维护</a></li>
+                <li><a href="#" id="admin-maintenance">套餐维护</a></li>
                 <li><a href="/Manage/UserList.aspx" id="admin-user">用户管理</a></li>
                 <li><a href="/Manage/GeneralItemList.aspx" id="admin-gitemlist">项目库管理</a></li>
                 <li><a href="/Manage/GeneralInstrumentList.aspx" id="admin-instrlist">仪器库管理</a></li>

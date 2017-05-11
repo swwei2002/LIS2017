@@ -1,13 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="LIS2017.Manage.UserList" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <script type="text/javascript">
 		    window.onload=function(){
 		        changeSideBar("system", "system-totaluser");
 		    }		
     </script>
-
 </asp:Content>
 
 
@@ -46,7 +45,7 @@
                 <td><%# Eval("user_name")%></td>
                 <td><%# Eval("user_password")%></td>
                 <td><%# Eval("real_name")%></td>
-                <td><%# Eval("department_name")%></td>
+                <td><%# Eval("name")%></td>
                 <td><%# Eval("user_access").ToString() == "1" ? "普通用户" : Eval("user_access").ToString() == "2" ? "管理员" : "超级管理员"%></td>
 				<td><%# Eval("disable").ToString() == "0" ? "启用" : "禁用"%></td>
                 <td>
@@ -66,7 +65,8 @@
                 <td colspan="7">
                   <div class="bulk-actions align-left">
                     <a class="button" href="UserAdd.aspx">新增用户</a> </div>
-                  <div class="pagination"> <a href="#" title="第一页">&laquo; 第一页</a><a href="#" title="前一页">&laquo; 前一页</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="后一页">后一页 &raquo;</a><a href="#" title="最末页">最末页 &raquo;</a> </div>
+                        <div class="pagination">
+ </div>
                   <!-- End .pagination -->
                   <div class="clear"></div>
                 </td>
