@@ -256,6 +256,10 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
+    <Content Include="Manage\CurrentInstrumentDetail.aspx" />
+    <Content Include="Manage\CurrentInstrumentList.aspx" />
+    <Content Include="Manage\GeneralInstrumentDetail.aspx" />
+    <Content Include="Manage\GeneralInstrumentList.aspx" />
     <Content Include="Manage\GeneralItemDetail.aspx" />
     <Content Include="Manage\GeneralItemList.aspx" />
     <Content Include="Manage\UserAdd.aspx" />
@@ -355,9 +359,14 @@
   <ItemGroup>
     <Compile Include="App_Code\CodeInfoManage.cs" />
     <Compile Include="App_Code\Common.cs" />
+    <Compile Include="App_Code\CurrentInstrumentManage.cs" />
     <Compile Include="App_Code\DbHelperSQL.cs" />
+    <Compile Include="App_Code\GeneralInstrumentItem.cs" />
+    <Compile Include="App_Code\GeneralInstrumentManage.cs" />
     <Compile Include="App_Code\GeneralItemManage.cs" />
+    <Compile Include="App_Code\InstrumentItemManage.cs" />
     <Compile Include="App_Code\Manage.cs" />
+    <Compile Include="App_Code\TestGroupManage.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -433,6 +442,34 @@
     </Compile>
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\CurrentInstrumentDetail.aspx.cs">
+      <DependentUpon>CurrentInstrumentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\CurrentInstrumentDetail.aspx.designer.cs">
+      <DependentUpon>CurrentInstrumentDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\CurrentInstrumentList.aspx.cs">
+      <DependentUpon>CurrentInstrumentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\CurrentInstrumentList.aspx.designer.cs">
+      <DependentUpon>CurrentInstrumentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\GeneralInstrumentDetail.aspx.cs">
+      <DependentUpon>GeneralInstrumentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\GeneralInstrumentDetail.aspx.designer.cs">
+      <DependentUpon>GeneralInstrumentDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\GeneralInstrumentList.aspx.cs">
+      <DependentUpon>GeneralInstrumentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\GeneralInstrumentList.aspx.designer.cs">
+      <DependentUpon>GeneralInstrumentList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage\GeneralItemDetail.aspx.cs">
       <DependentUpon>GeneralItemDetail.aspx</DependentUpon>
