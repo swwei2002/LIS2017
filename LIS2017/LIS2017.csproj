@@ -371,6 +371,8 @@
     <Compile Include="App_Code\GeneralItemManage.cs" />
     <Compile Include="App_Code\InstrumentItemManage.cs" />
     <Compile Include="App_Code\Manage.cs" />
+    <Compile Include="App_Code\Order.cs" />
+    <Compile Include="App_Code\TestGroupManage.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="About.aspx.cs">
