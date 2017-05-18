@@ -96,6 +96,8 @@
                 <li><a href="#" id="admin-maintenance">套餐维护</a></li>
                 <li><a href="/Manage/UserList.aspx" id="admin-user">用户管理</a></li>
                 <li><a href="/Manage/GeneralItemList.aspx" id="admin-gitemlist">项目库管理</a></li>
+                <li><a href="/Manage/GeneralInstrumentList.aspx" id="admin-instrlist">仪器库管理</a></li>
+                <li><a href="/Manage/CurrentInstrumentList.aspx" id="admin-currinstrlist">检验仪器管理</a></li>
 		    </ul>
 		</li>
 		  

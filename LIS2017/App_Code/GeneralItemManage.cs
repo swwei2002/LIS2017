@@ -24,9 +24,9 @@ namespace LIS2017.App_Code
             string sql = string.Format("delete from LIS_GENERAL_ITEM_PROPERTY where ITEM_CODE='{0}'", itemcode);
             return DbHelperSQL.ExecuteSql(sql);
         }
-        public static DataSet GetItemListByTestType(string type)
+        public static DataSet GetItemListExculdeInstrItem(string type,string instrID)
         {
-            string sql = string.Format("select * from LIS_GENERAL_ITEM_PROPERTY where TEST_TYPE='{0}'",type);
+            string sql = string.Format("select * from LIS_GENERAL_ITEM_PROPERTY p1 where TEST_TYPE='{0}' and not exists(select 1 from LIS_INSTRUMENT_ITEM_PROPERTY p2 where p2.INSTRUMENT_ID='{1}' and p1.ITEM_CODE=p2.ITEM_CODE)", type,instrID);
             return DbHelperSQL.Query(sql);
         }
 

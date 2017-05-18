@@ -67,7 +67,10 @@ namespace LIS2017
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //if (Session["user_id"] == null)
+            //{
+            //    Response.Redirect("/Login.aspx?link_from=" + Request.Url.AbsolutePath);
+            //}
         }
     }
 }
