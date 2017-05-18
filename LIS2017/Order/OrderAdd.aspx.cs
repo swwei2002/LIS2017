@@ -48,7 +48,7 @@ namespace LIS2017.Order
             //调试期间注视掉，应该没有session
             //LIS2017.App_Code.Common.AddLog(int.Parse(Session["UserId"].ToString()), "OrderAdd.aspx", num, "Add" + num + "Success");
 
-            LTP.Common.MessageBox.Show(this.Page, "成功生成"+num+"条标本号，请至XXX绑定套餐或至XXX补全标本信息");
+            LTP.Common.MessageBox.Show(this.Page, "成功生成"+num+ "条标本号，请至“标本管理-项目绑定”模块绑定套餐或至“标本管理-信息补录”模块补全标本信息。");
             return;
 
         }
