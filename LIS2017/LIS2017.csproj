@@ -269,6 +269,7 @@
     <Content Include="Order\OrderList.aspx" />
     <Content Include="Order\OrderSearch.aspx" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\LIS.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Resources\css\invalid.css" />
     <Content Include="Resources\css\reset.css" />

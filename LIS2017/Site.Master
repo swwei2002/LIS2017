@@ -87,7 +87,7 @@
 
         <li><a href="#" class="nav-top-item" id="system">系统管理</a>
             <ul>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="system-user">修改密码</a></li>
+                <li><a href="/Manage/UserPassword.aspx" id="system-password">修改密码</a></li>
 		    </ul>
 		</li>
 
