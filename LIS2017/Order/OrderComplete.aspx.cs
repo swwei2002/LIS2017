@@ -62,9 +62,16 @@ namespace LIS2017.Order
 
             }
 
-
             LTP.Common.MessageBox.Show(this.Page, "成功将" + num + "条标本号放入待打印列表，请操作打印机打印");
             return;
+        }
+
+        protected void ImageButtonDelete_Click(object sender, ImageClickEventArgs e)
+        {
+            string itemCode = ((ImageButton)sender).CommandArgument;
+            int i = LIS2017.App_Code.Order.OrderDisable(int.Parse(itemCode));
+            //int i = GeneralItemManage.DeleteItemByItemCode(itemCode);
+            BindData();
         }
 
 

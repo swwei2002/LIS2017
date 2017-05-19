@@ -22,13 +22,13 @@ namespace LIS2017.Order {
         protected global::System.Web.UI.WebControls.TextBox txtCode;
         
         /// <summary>
-        /// ddlOrderFrom 控件。
+        /// txtOrderFrom 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOrderFrom;
+        protected global::System.Web.UI.WebControls.TextBox txtOrderFrom;
         
         /// <summary>
         /// ddlSampleType 控件。
@@ -83,6 +83,15 @@ namespace LIS2017.Order {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCardId;
+        
+        /// <summary>
+        /// txtSampleDate 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSampleDate;
         
         /// <summary>
         /// btnSubmit 控件。

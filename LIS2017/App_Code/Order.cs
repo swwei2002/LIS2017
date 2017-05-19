@@ -30,6 +30,11 @@ namespace LIS2017.App_Code
             DbHelperSQL.ExecuteSql("delete from lis_print");
         }
 
+        public static void OrderDateUpdate(int info_id,string column_name,string dt)
+        {
+            DbHelperSQL.ExecuteSql("update LIS_TEST_INFO set "+column_name+" = '"+dt+"' where info_id = "+ info_id);
+        }
+
         //公司id，公司名，生成数量
         public static int OrderAdd(string company_id,string company_name,int number)
         {
@@ -73,6 +78,11 @@ namespace LIS2017.App_Code
         public static int OrderModify(int info_id,string company_id,string company_name,string sample_type,string dis_code,string disease,string name,string gender,string age,string card_id,string info_status)
         {
             return DbHelperSQL.ExecuteSql("update LIS_TEST_INFO set company_id = '" + company_id + "',company_name = '" + company_name + "',sample_type = '" + sample_type + "',dis_code = '" + dis_code + "',disease = '" + disease + "',name = '" + name + "',gender = '" + gender + "',age = '" + age + "',card_id = '" + card_id + "',info_status = '" + info_status + "' where info_id = " + info_id);
+        }
+
+        public static int OrderDisable(int info_id)
+        {
+            return DbHelperSQL.ExecuteSql("update LIS_TEST_INFO set disable = 1 where info_id = " + info_id);
         }
 
         public static DataSet OrderList(string info_status,int start,int end)
@@ -124,6 +134,8 @@ namespace LIS2017.App_Code
             }
             return DbHelperSQL.Query(sb.ToString());
         }
+
+
 
     }
 }

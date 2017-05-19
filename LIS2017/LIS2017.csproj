@@ -275,17 +275,6 @@
     <Content Include="Order\OrderSubAdd.aspx" />
     <Content Include="Order\WorkInfo.aspx" />
     <Content Include="packages.config" />
-    <Content Include="Resources\jquery\AUTHORS.txt" />
-    <Content Include="Resources\jquery\external\jquery\jquery.js" />
-    <Content Include="Resources\jquery\images\ui-icons_444444_256x240.png" />
-    <Content Include="Resources\jquery\images\ui-icons_555555_256x240.png" />
-    <Content Include="Resources\jquery\images\ui-icons_777620_256x240.png" />
-    <Content Include="Resources\jquery\images\ui-icons_777777_256x240.png" />
-    <Content Include="Resources\jquery\images\ui-icons_cc0000_256x240.png" />
-    <Content Include="Resources\jquery\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="Resources\jquery\index.html" />
-    <Content Include="Resources\jquery\package.json" />
-    <None Include="Properties\PublishProfiles\lis2017.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Resources\css\invalid.css" />
     <Content Include="Resources\css\reset.css" />

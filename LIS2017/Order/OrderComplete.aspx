@@ -41,9 +41,7 @@
                 </th>
                 <th>标本号</th>
                 <th>标本来源</th>
-                <th>姓名</th>
-                <th>性别</th>
-                <th>年龄</th>
+                <th>生成日期</th>
                 <th style="width:10%">操作</th>
               </tr>
             </thead>
@@ -61,12 +59,14 @@
                 </td>
                 <td><%# Eval("CODE")%></td>
                 <td><%# Eval("company_name")%></td>
-                <td><%# Eval("name")%></td>
-                <td><%# Eval("gender")%></td>
-                <td><%# Eval("age")%></td>
+                <td><%# Eval("create_date")%></td>
+
                 <td>
                   <!-- Icons -->
-                  <a href="OrderDetail.aspx?info_id=<%# Eval("info_id")%>" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>  </td>
+                  <a href="OrderDetail.aspx?type=complete&info_id=<%# Eval("info_id")%>" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>
+                 <asp:ImageButton ID="ImageButtonDelete" runat="server" CommandArgument='<%# Eval("info_id")%>' ImageUrl="/Resources/images/icons/cross.png" OnClick="ImageButtonDelete_Click"  OnClientClick="return confirm('确定删除？')" ToolTip="删除"/>
+
+                </td>
               </tr>  
 		  <!-- loop list end -->
             		  <!-- loop list end -->

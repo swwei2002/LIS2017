@@ -42,6 +42,7 @@
                 <th>姓名</th>
                 <th>性别</th>
                 <th>年龄</th>
+                <th>生成日期</th>
                 <th style="width:10%">操作</th>
               </tr>
             </thead>
@@ -62,9 +63,10 @@
                 <td><%# Eval("name")%></td>
                 <td><%# Eval("gender")%></td>
                 <td><%# Eval("age")%></td>
+                <td><%# Eval("create_date")%></td>
                 <td>
                   <!-- Icons -->
-                  <a href="OrderDetail.aspx?info_id=<%# Eval("info_id")%>" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>  </td>
+                  <a href="OrderDetail.aspx?type=list&info_id=<%# Eval("info_id")%>" title="Edit"><img src="/Resources/images/icons/pencil.png" alt="编辑" /></a>  </td>
               </tr>  
 		  <!-- loop list end -->
             		  <!-- loop list end -->
@@ -76,7 +78,7 @@
             <tfoot>
               <tr>
 
-                <td colspan="7">
+                <td colspan="8">
 
                 <div class="pagination">
                     <webdiyer:aspnetpager ID="AspNetPager2" runat="server" AlwaysShow="True" OnPageChanged="AspNetPager2_PageChanged" ShowCustomInfoSection="Left"></webdiyer:aspnetpager>

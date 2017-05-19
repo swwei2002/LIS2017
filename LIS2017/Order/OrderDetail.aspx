@@ -35,10 +35,9 @@
 
             <p>
               <label>标本来源</label>
-                <asp:DropDownList ID="ddlOrderFrom" runat="server" class="small-input">
-                    
-                </asp:DropDownList>
-
+        <asp:TextBox ID="txtOrderFrom" runat="server" class="text-input small-input" ReadOnly="true"></asp:TextBox>
+               <br />
+              <small>标本来源不允许修改</small>
             </p>
 
             <p>
@@ -79,6 +78,11 @@
             <p>
               <label>保单号</label>
               <asp:TextBox ID="txtCardId" runat="server" class="text-input small-input" ></asp:TextBox>
+            </p>
+
+            <p>
+              <label>采样日期</label>
+              <asp:TextBox ID="txtSampleDate" runat="server" class="text-input small-input" ></asp:TextBox>
             </p>
             <p>
               <asp:Button ID="btnSubmit" class="button" runat="server" Text="提交" OnClick="btnSubmit_Click" />
