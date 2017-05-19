@@ -44,7 +44,10 @@ namespace LIS2017.Order
             }
 
             int num = LIS2017.App_Code.Order.OrderAdd(ddlOrderFrom.SelectedValue.ToString(), ddlOrderFrom.SelectedItem.Text, int.Parse(txtNumber.Text));
-            
+
+
+            LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_COMPANY", "CODE", ddlOrderFrom.SelectedValue.ToString());
+
             //调试期间注视掉，应该没有session
             //LIS2017.App_Code.Common.AddLog(int.Parse(Session["UserId"].ToString()), "OrderAdd.aspx", num, "Add" + num + "Success");
 

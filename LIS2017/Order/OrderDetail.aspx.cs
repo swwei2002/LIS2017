@@ -23,11 +23,11 @@ namespace LIS2017.Order
             DataSet ds = new DataSet();
 
             //标本来源
-            ds = LIS2017.App_Code.Common.CompanyInfo("0");
-            ddlOrderFrom.DataSource = ds.Tables[0].DefaultView;
-            ddlOrderFrom.DataTextField = "NAME";
-            ddlOrderFrom.DataValueField = "CODE";
-            ddlOrderFrom.DataBind();
+            //ds = LIS2017.App_Code.Common.CompanyInfo("0");
+            //ddlOrderFrom.DataSource = ds.Tables[0].DefaultView;
+            //ddlOrderFrom.DataTextField = "NAME";
+            //ddlOrderFrom.DataValueField = "CODE";
+            //ddlOrderFrom.DataBind();
 
             //标本类别
             ds = LIS2017.App_Code.Common.CodeInfo("C02");
@@ -80,13 +80,13 @@ namespace LIS2017.Order
             }
 
             //完善标本
-            LIS2017.App_Code.Order.OrderModify(int.Parse(Request.QueryString["info_id"]), ddlOrderFrom.SelectedValue.ToString(), ddlOrderFrom.SelectedItem.Text, ddlSampleType.SelectedItem.Text, ddlDisease.SelectedValue.ToString(), ddlDisease.SelectedItem.Text, txtName.Text, ddlGender.SelectedItem.Text, txtAge.Text, txtCardId.Text, order_status);
+            LIS2017.App_Code.Order.OrderModify(int.Parse(Request.QueryString["info_id"]),  ddlSampleType.SelectedItem.Text, ddlDisease.SelectedValue.ToString(), ddlDisease.SelectedItem.Text, txtName.Text, ddlGender.SelectedItem.Text, txtAge.Text, txtCardId.Text, order_status);
             //修改采样日期
             LIS2017.App_Code.Order.OrderDateUpdate(int.Parse(Request.QueryString["info_id"]), "sample_date", txtSampleDate.Text);
 
 
             //将选择过的推到最前
-            LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_COMPANY", "CODE", ddlOrderFrom.SelectedValue.ToString());
+           // LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_COMPANY", "CODE", ddlOrderFrom.SelectedValue.ToString());
             LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_CODE_INFO","NAME",ddlSampleType.SelectedValue.ToString());
             LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_DISEASE","DIS_ID",ddlDisease.SelectedValue.ToString());
             LIS2017.App_Code.Common.ReviseTimeUpdate("LIS_CODE_INFO", "NAME", ddlGender.SelectedValue.ToString());

@@ -75,9 +75,9 @@ namespace LIS2017.App_Code
             return gen_num;
         }
 
-        public static int OrderModify(int info_id,string company_id,string company_name,string sample_type,string dis_code,string disease,string name,string gender,string age,string card_id,string info_status)
+        public static int OrderModify(int info_id,string sample_type,string dis_code,string disease,string name,string gender,string age,string card_id,string info_status)
         {
-            return DbHelperSQL.ExecuteSql("update LIS_TEST_INFO set company_id = '" + company_id + "',company_name = '" + company_name + "',sample_type = '" + sample_type + "',dis_code = '" + dis_code + "',disease = '" + disease + "',name = '" + name + "',gender = '" + gender + "',age = '" + age + "',card_id = '" + card_id + "',info_status = '" + info_status + "' where info_id = " + info_id);
+            return DbHelperSQL.ExecuteSql("update LIS_TEST_INFO set sample_type = '" + sample_type + "',dis_code = '" + dis_code + "',disease = '" + disease + "',name = '" + name + "',gender = '" + gender + "',age = '" + age + "',card_id = '" + card_id + "',info_status = '" + info_status + "' where info_id = " + info_id);
         }
 
         public static int OrderDisable(int info_id)
