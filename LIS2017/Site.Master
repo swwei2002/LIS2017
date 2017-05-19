@@ -14,7 +14,10 @@
 <link rel="stylesheet" href="Resources/css/invalid.css" type="text/css" media="screen" />
 <!--                       Javascripts                       -->
 <!-- jQuery -->
-<script type="text/javascript" src="/Resources/scripts/jquery-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="/Resources/jquery/jquery-ui.css"/>
+  
+<script type="text/javascript" src="/Resources/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/Resources/jquery/jquery-ui.min.js"></script>
 <!-- jQuery Configuration -->
 <script type="text/javascript" src="/Resources/scripts/simpla.jquery.configuration.js"></script>
 <!-- Facebox jQuery Plugin -->
@@ -66,7 +69,7 @@
                 <li><a href="/Order/OrderComplete.aspx" id="order-complete">信息补录</a></li>
                 <li><a href="/Order/OrderList.aspx" id="order-info">标本汇总</a></li>
                 <li><a href="/Order/OrderSearch.aspx" id="order-search">标本搜索</a></li>
-                <li><a href="#" id="order-receive">项目绑定</a></li>
+                <li><a href="/Order/OrderSubAdd.aspx" id="order-receive">项目绑定</a></li>
 		    </ul>
 		</li>
 
