@@ -29,7 +29,9 @@
 
               <div> 
 
-                    <asp:Button ID="btnPrint" runat="server" Text="打印选中的标本" class="button" OnClick="btnPrint_Click" />
+                    <asp:Button ID="btnPrint" runat="server" Text="打印" class="button" OnClick="btnPrint_Click" />
+                  &nbsp;
+                  <asp:Button ID="btnDelete" runat="server" Text="删除" class="button" OnClick="btnDelete_Click" />
 
                  </div>
 

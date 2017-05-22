@@ -66,6 +66,7 @@ namespace LIS2017.Order
             return;
         }
 
+        //单条删除
         protected void ImageButtonDelete_Click(object sender, ImageClickEventArgs e)
         {
             string itemCode = ((ImageButton)sender).CommandArgument;
@@ -74,6 +75,27 @@ namespace LIS2017.Order
             BindData();
         }
 
+        //批量删除
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            int num = 0;
 
+
+            foreach (RepeaterItem item in rptData.Items)
+            {
+                CheckBox cb = (CheckBox)item.FindControl("cbPrint"); //根据控件id获得控件对象，cdDelete是checkBox控件的id  
+
+                if (cb.Checked == true)
+
+                {
+                    //LIS2017.App_Code.Order.OrderPrintAdd(cb.ToolTip, "", "");
+                    LIS2017.App_Code.Order.OrderDisable(int.Parse(cb.ToolTip));
+                    num++;
+                }
+
+            }
+
+            BindData();
+        }
     }
 }
