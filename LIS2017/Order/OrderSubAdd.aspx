@@ -83,6 +83,7 @@
             <p><label style="display:inline">终止日期</label><asp:TextBox ID="TextBoxEnd" runat="server"></asp:TextBox>
                 <asp:Button ID="ButtonSearch" runat="server" Text="查询" OnClick="ButtonSearch_Click" CssClass="button" /> 
                 <asp:Button ID="ButtonBind" runat="server" Text="绑定项目" CssClass="button" OnClick="ButtonBind_Click" /> 
+                <a href="WorkInfo.aspx" target="_blank">工作单</a>
             </p>
         </div>
 

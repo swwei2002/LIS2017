@@ -267,12 +267,14 @@
     <Content Include="Manage\UserDisable.aspx" />
     <Content Include="Manage\UserList.aspx" />
     <Content Include="Manage\UserPassword.aspx" />
+    <Content Include="Order\ItemResultInput.aspx" />
     <Content Include="Order\OrderAdd.aspx" />
     <Content Include="Order\OrderComplete.aspx" />
     <Content Include="Order\OrderDetail.aspx" />
     <Content Include="Order\OrderList.aspx" />
     <Content Include="Order\OrderSearch.aspx" />
     <Content Include="Order\OrderSubAdd.aspx" />
+    <Content Include="Order\OrderSubAudit.aspx" />
     <Content Include="Order\WorkInfo.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
@@ -543,6 +545,13 @@
     <Compile Include="Manage\UserPassword.aspx.designer.cs">
       <DependentUpon>UserPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Order\ItemResultInput.aspx.cs">
+      <DependentUpon>ItemResultInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\ItemResultInput.aspx.designer.cs">
+      <DependentUpon>ItemResultInput.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Order\OrderAdd.aspx.cs">
       <DependentUpon>OrderAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -584,6 +593,13 @@
     </Compile>
     <Compile Include="Order\OrderSubAdd.aspx.designer.cs">
       <DependentUpon>OrderSubAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\OrderSubAudit.aspx.cs">
+      <DependentUpon>OrderSubAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\OrderSubAudit.aspx.designer.cs">
+      <DependentUpon>OrderSubAudit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Order\WorkInfo.aspx.cs">
       <DependentUpon>WorkInfo.aspx</DependentUpon>
