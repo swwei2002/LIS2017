@@ -269,7 +269,7 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Report\FinalReport.aspx" />
     <Content Include="Report\ReportList.aspx" />
-    <Content Include="Report\ReportMake.aspx" />
+    <Content Include="Report\ReportPrint.aspx" />
     <Content Include="Resources\css\invalid.css" />
     <Content Include="Resources\css\reset.css" />
     <Content Include="Resources\css\style.css" />
@@ -382,6 +382,7 @@
     <Compile Include="App_Code\OrderItemManage.cs" />
     <Compile Include="App_Code\OrderItemSubManage.cs" />
     <Compile Include="App_Code\OrderSubManage.cs" />
+    <Compile Include="App_Code\Report.cs" />
     <Compile Include="App_Code\TestGroupManage.cs" />
     <Compile Include="App_Code\TestInfoManage.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -615,12 +616,12 @@
     <Compile Include="Report\ReportList.aspx.designer.cs">
       <DependentUpon>ReportList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\ReportMake.aspx.cs">
-      <DependentUpon>ReportMake.aspx</DependentUpon>
+    <Compile Include="Report\ReportPrint.aspx.cs">
+      <DependentUpon>ReportPrint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report\ReportMake.aspx.designer.cs">
-      <DependentUpon>ReportMake.aspx</DependentUpon>
+    <Compile Include="Report\ReportPrint.aspx.designer.cs">
+      <DependentUpon>ReportPrint.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

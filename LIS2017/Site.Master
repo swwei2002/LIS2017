@@ -82,7 +82,7 @@
 
         <li><a href="#" class="nav-top-item" id="report">报告管理</a>
             <ul>
-                <li><a href="{:U('/'.MODULE_NAME.'/Survey/pcr')}" id="report-input">报告审核</a></li>
+                <li><a href="/Report/ReportList.aspx" id="report-list">报告列表</a></li>
                 <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="report-print">报告打印</a></li>
                 <li><a href="{:U('/'.MODULE_NAME.'/Survey/sync')}" id="report-totalprint">汇总打印</a></li>
 		    </ul>

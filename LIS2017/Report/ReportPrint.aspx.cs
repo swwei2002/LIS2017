@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace LIS2017.Report
 {
-    public partial class ReportMake : System.Web.UI.Page
+    public partial class ReportPrint : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

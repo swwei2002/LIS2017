@@ -12,10 +12,6 @@ namespace LIS2017.Order
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user_id"] == null)
-            {
-                //Response.Redirect("../Login.aspx?link_from=Order/OrderList.aspx");
-            }
 
             if (!IsPostBack)
             {
